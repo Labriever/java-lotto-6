@@ -14,37 +14,14 @@ public class ResultView {
 			System.out.println(userLotto[i].toString());
 		}
 	}
-	public void result(Set<Integer> answerNum, int bonus, List<Integer>[] list) {
+	
+	public void preResult() {
 		System.out.println("당첨 통계");
 		System.out.println("---");
-		
+	}
+	
+	public void result(Map<Integer, Integer> answer, List<Integer>[] list) {
 		int count = list.length;
-		Map<Integer, Integer> answer = new HashMap<>();
-		
-		for(int i=0;i<count;i++) {
-			int tmp = 0;
-			for(int myLotto : list[i]) {
-				if(answerNum.contains(myLotto)) {
-					tmp++;
-				}
-			}
-			boolean isBonus = false;
-			if(tmp == 5) {
-				for(int myLotto : list[i]) {
-					if(myLotto == bonus) {
-						isBonus = true;
-					}
-				}
-			}
-			int winning = 0;
-			if(isBonus) {
-				winning= (answer.get(10) == null?0:answer.get(10));
-				answer.put(10, ++winning);
-			}else {
-				winning = (answer.get(tmp) == null ? 0 : answer.get(tmp));
-				answer.put(tmp, ++winning);
-			}
-		}
 		
 		int three = (answer.get(3) == null?0 : answer.get(3));
 		int four = (answer.get(4) == null?0 : answer.get(4));

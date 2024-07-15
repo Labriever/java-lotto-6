@@ -1,6 +1,7 @@
 package lotto.controller;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import lotto.service.LottoService;
@@ -29,6 +30,9 @@ public class LottoController {
 		Set<Integer> answerNum = view.getLotto();
 		int bonus = view.bonus();
 		
-		result.result(answerNum, bonus, list);
+		Map<Integer, Integer> map = service.getResult(answerNum, bonus, list);
+		
+		result.preResult();
+		result.result(map, list);
 	}
 }

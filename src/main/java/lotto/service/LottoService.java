@@ -9,8 +9,8 @@ import lotto.util.RandomNumberGenerator;
 public class LottoService {
 	public List<Integer>[] makeLotto(int num, List<Integer>[] userLotto) {
 		userLotto = new ArrayList[num];
-		boolean[] bool = new boolean[46];
 		for(int i=0;i<num;i++) {
+			boolean[] bool = new boolean[46];
 			userLotto[i] = new ArrayList<>();
 			while(userLotto[i].size()<7) {
 				int tmp = RandomNumberGenerator.generate();
@@ -21,7 +21,6 @@ public class LottoService {
 			}
 			Collections.sort(userLotto[i]);
 		}
-		
 		return userLotto;
 	}
 	

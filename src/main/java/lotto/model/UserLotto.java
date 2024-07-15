@@ -10,10 +10,17 @@ public class UserLotto {
 	public UserLotto(List<Integer>[] userLotto) {
 		this.userLotto = userLotto;
 	}
+
+	public List<Integer>[] getUserLotto() {
+		return userLotto;
+	}
 	
-	private static List<Integer>[] makeLotto() {
-		
+	private static List<Integer>[] makeLotto(int num) {
+		for(int i=0;i<7;i++) {
+			
+		}
 		return null;
 	}
+
 	
 }

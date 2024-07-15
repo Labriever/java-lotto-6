@@ -59,9 +59,8 @@ public class ResultView {
 		System.out.println("6개 일치 (20,000,000,000원) - "+ six +"개");
 
 		long plus = three*5000 + four*50000+five*1500000+bonusFive*30000000+six*20000000000L; 
-		System.out.println(plus);
-		System.out.println(count*1000);
-		double revenue = Math.round((plus / (count*1000))*100);
+		double revenue = (double)plus / (count*1000);
+		revenue = Math.round(revenue*1000)/10.0;
 		
 		System.out.println("총 수익률은 "+revenue+"% 입니다.");
 		

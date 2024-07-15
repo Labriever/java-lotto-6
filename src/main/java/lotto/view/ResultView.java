@@ -1,5 +1,6 @@
 package lotto.view;
 
+import java.util.Collection;
 import java.util.List;
 
 public class ResultView {
@@ -8,7 +9,7 @@ public class ResultView {
 		System.out.println(num + "개를 구매했습니다.");
 		
 		for(int i=0;i<num;i++) {
-			System.out.println(userLotto.toString());
+			System.out.println(userLotto[i].toString());
 		}
 	}
 	public void result() {

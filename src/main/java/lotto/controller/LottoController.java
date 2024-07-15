@@ -22,13 +22,12 @@ public class LottoController {
 	public void run() {
 		int pay = view.getPay();
 		List<Integer>[] list = new List[pay];
-		service.makeLotto(pay, list);
+		list = service.makeLotto(pay, list);
 		result.boughtRotto(pay, list);
 		
 		List<Integer> answerNum = view.getLotto();
 		int bonus = view.bonus();
 		
-		
-		
+		result.result();
 	}
 }

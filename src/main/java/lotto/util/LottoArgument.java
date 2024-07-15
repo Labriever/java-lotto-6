@@ -23,7 +23,7 @@ public class LottoArgument {
 	// 로또 번호의 갯수는 총 6개
 	public static void validate(List<Integer> numbers) {
         if (numbers.size() != 6) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("번호는 6개여야 합니다.");
         }
     }
 }

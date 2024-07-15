@@ -4,11 +4,11 @@ import java.util.List;
 
 import lotto.util.LottoArgument;
 
-public class Lotto {
+public class AnswerLotto {
 	private final List<Integer> numbers;
 	private int bonus;
 	
-    public Lotto(List<Integer> numbers) {
+    public AnswerLotto(List<Integer> numbers) {
     	this.numbers = numbers;
         LottoArgument.validate(numbers);
         LottoArgument.lottoRange(numbers);

@@ -1,33 +1,22 @@
 package lotto.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import lotto.util.RandomNumberGenerator;
+import lotto.service.LottoService;
 
 public class UserLotto {
 	private final List<Integer>[] userLotto;
-
-	public UserLotto(List<Integer>[] userLotto) {
-		this.userLotto = userLotto;
+	private final int num;
+	
+	public UserLotto(int num, List<Integer>[] userLotto) {
+		this.num = num;
+		this.userLotto = LottoService.makeLotto(num, userLotto);
 	}
 
 	public List<Integer>[] getUserLotto() {
 		return userLotto;
 	}
 	
-	private static List<Integer>[] makeLotto(int num, List<Integer>[] userLotto) {
-		userLotto = new ArrayList[num];
-		for(int i=0;i<7;i++) {
-			userLotto[i] = new ArrayList<>();
-			for(int j=0;j<7;j++) {
-				int tmp = RandomNumberGenerator.generate();
-				userLotto[i].add(tmp);
-			}
-		}
-		
-		return userLotto;
-	}
 
 	
 }

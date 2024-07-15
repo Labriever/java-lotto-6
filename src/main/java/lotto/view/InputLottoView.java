@@ -31,9 +31,10 @@ public class InputLottoView {
 
 	public int bonus() {
 		// TODO Auto-generated method stub
+		System.out.println("보너스 번호를 입력해 주세요.");
 		int input = SC.nextInt();
-		LottoArgument.
-		return 0;
+		LottoArgument.numberrange(input);
+		return input;
 	}
 
 }

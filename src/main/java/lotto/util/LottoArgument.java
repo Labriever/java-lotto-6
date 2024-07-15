@@ -7,11 +7,11 @@ public class LottoArgument {
 	// 로또 번호는 1~45 사이
 	public static void lottoRange(List<Integer> number) {
 		for(int lotto : number) {
-			
+			numberrange(lotto);
 		}
 	}
 	
-	private static void numberrange(int lotto) {
+	public static void numberrange(int lotto) {
 		if(lotto < 1 || lotto > 45) {
 			throw new IllegalArgumentException("로또 번호는 1부터 45 사이의 숫자여야 합니다.");
 		}

@@ -6,7 +6,7 @@ import java.util.List;
 import lotto.util.RandomNumberGenerator;
 
 public class LottoService {
-	public static List<Integer>[] makeLotto(int num, List<Integer>[] userLotto) {
+	public List<Integer>[] makeLotto(int num, List<Integer>[] userLotto) {
 		userLotto = new ArrayList[num];
 		for(int i=0;i<num;i++) {
 			userLotto[i] = new ArrayList<>();

@@ -1,11 +1,11 @@
 package lotto.util;
 
-import java.util.List;
+import java.util.Set;
 
 public class LottoArgument {
 	
 	// 로또 번호는 1~45 사이
-	public static void lottoRange(List<Integer> number) {
+	public static void lottoRange(Set<Integer> number) {
 		for(int lotto : number) {
 			numberrange(lotto);
 		}
@@ -25,7 +25,7 @@ public class LottoArgument {
 	}
 	
 	// 로또 번호의 갯수는 총 6개
-	public static void validate(List<Integer> numbers) {
+	public static void validate(Set<Integer> numbers) {
         if (numbers.size() != 6) {
             throw new IllegalArgumentException("번호는 6개여야 합니다.");
         }

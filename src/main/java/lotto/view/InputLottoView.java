@@ -3,6 +3,7 @@ package lotto.view;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import lotto.util.LottoArgument;
@@ -18,12 +19,12 @@ public class InputLottoView {
 		return (input/1000);
 	}
 	
-	public List<Integer> getLotto(){
+	public Set<Integer> getLotto(){
 		System.out.println("당첨 번호를 입력해주세요.");
 		String answer = SC.next();
-		List<Integer> lotto = Arrays.stream(answer.split(","))
+		Set<Integer> lotto = Arrays.stream(answer.split(","))
                 .map(Integer::parseInt)
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
 		LottoArgument.lottoRange(lotto);
 		return lotto;
 		

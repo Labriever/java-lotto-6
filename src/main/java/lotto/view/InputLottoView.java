@@ -15,7 +15,7 @@ public class InputLottoView {
 
 		int input = SC.nextInt();
 		LottoArgument.buyLotto(input);
-		return input;
+		return (input/1000);
 	}
 	
 	public List<Integer> getLotto(){
@@ -24,8 +24,16 @@ public class InputLottoView {
 		List<Integer> lotto = Arrays.stream(answer.split(","))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
+		LottoArgument.lottoRange(lotto);
 		return lotto;
 		
+	}
+
+	public int bonus() {
+		// TODO Auto-generated method stub
+		int input = SC.nextInt();
+		LottoArgument.
+		return 0;
 	}
 
 }
